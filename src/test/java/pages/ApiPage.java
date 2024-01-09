@@ -24,11 +24,11 @@ public class ApiPage {
          switch (url) {
             case "GET_LIST_USERS":
                 setURL = Endpoint.GET_LIST_USERS;
-                System.out.println("setURL : " + setURL);
+                //System.out.println("setURL : " + setURL);
                 break;
             case "CREATE_NEW_USERS":
                 setURL = Endpoint.CREATE_NEW_USERS;
-                System.out.println("setURL : " + setURL);
+                //System.out.println("setURL : " + setURL);
                 break;
             case "UPDATE_USERS":
                 setURL = Endpoint.UPDATE_USERS;
@@ -44,7 +44,7 @@ public class ApiPage {
 
     public void apiToGetListUsers() {
         res = getListUsers(setURL);
-        System.out.println("respnse body: " + res.getBody().asString());
+       // System.out.println("respnse body: " + res.getBody().asString());
     }
 
      public static Response getListUsers(String endpoint) {
@@ -56,7 +56,7 @@ public class ApiPage {
 
     public void validationStatusCode(int statusCode){
         assertThat(res.statusCode()).isEqualTo(statusCode);
-        System.out.println("status code : "+ res.statusCode());
+        //System.out.println("status code : "+ res.statusCode());
     }
 
     public void validationResponseBodyGetListUsers(){
@@ -76,19 +76,19 @@ public class ApiPage {
 
     public void validationResponseJsonWithJSONSchema(String filename){
         File JSONFile = RestUtil.getJSONSchemaFile(filename);
-        // File JSONFile = new File("src/test/java/utility/JSONSchemaData/"+filename);
-        System.out.println("JSONFilenya : "+JSONFile);
+        /* File JSONFile = new File("src/test/java/utility/JSONSchemaData/"+filename);*/
+        //System.out.println("JSONFilenya : "+JSONFile);
         res.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(JSONFile));
     }
 
     public void apiToCreateNewUsers(){
         res = CreateNewUsers(setURL);
-        System.out.println(res.getBody().asString());
+        //System.out.println(res.getBody().asString());
     }
 
     public void ApiToCreateNewUsersWithoutName(){
         res= CreateNewUsersWithoutName(setURL);
-        System.out.println(res.getBody().asString());
+        //System.out.println(res.getBody().asString());
     }
 
 

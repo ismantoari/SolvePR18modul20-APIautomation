@@ -11,21 +11,21 @@ public class Hooks {
 
     @BeforeAll
     public static void setUp(){
-        System.out.println("BeforeAll");
+        System.out.println("Before All - API TEST - ");
     }
 
     @AfterAll
     public static void tearDown(){
-        System.out.println("AfterAll");
+        System.out.println("AfterAll - API TEST - ");
     }
 
     @Before
     public void beforeTest(){
-        System.out.println("BeforeTest");
+        System.out.println("BeforeTest - API TEST - ");
     }
 
     @After
     public void afterTest(){
-        System.out.println("AfterTest");
+        System.out.println("AfterTest - API TEST - ");
     }
 }
