@@ -1,13 +1,21 @@
 Pengerjaan Tugas PR-18 modul-20 API Automation. 
 
 Framework : JUnit
+
 Kerangka Otomasi API : POM
+
 Testcases : Gherkin, dengan skenario:
+
             1. Get data user
+            
             2. Create new user (positive case)
+            
             3. Create New User - without name (negative case)
+            
             4. Update (Patch) user Name (Positive)
+            
             5. Update (Patch) edge test -"Status edge : active / inactive, filled by NA"  (Negative Edge Test)
+            
             6. Test Delete User
 
 Kerangka POM dengan struktur package sebagai berikut:
