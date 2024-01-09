@@ -20,9 +20,14 @@ Testcases : Gherkin, dengan skenario:
 
 Kerangka POM dengan struktur package sebagai berikut:
 
-features : tempat file.feature yang berisi test skenario dalam bentuk gherkin format
+features : tempat file.feature yang berisi test skenario dalam bentuk gherkin format.
+
 StepDef : merupakan tempat step definition. Step definition menghubungkan gherkin (file.feature) dengan logic pemrograman yang ada di pages. 
-pages : berisikan logic pemrograman
-Utility : berisikan utility dari test api automation dan File Json Schema
+
+pages : berisikan logic pemrograman.
+
+Utility : berisikan utility dari test api automation dan File Json Schema.
+
 Helper : berisikan file java yang digunakan oleh class yang berada pada ‘pages.
+
 runner : digunakan untuk melakukan run dan generate report.
